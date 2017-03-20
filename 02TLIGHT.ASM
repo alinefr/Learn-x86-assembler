@@ -12,6 +12,9 @@ Start:
 	MOV AL,30
 	OUT 01
 
+	MOV AL,50
+	OUT 01
+
 	JMP Start	; Jump back to the start.
 	END		; Program ends.
 	
