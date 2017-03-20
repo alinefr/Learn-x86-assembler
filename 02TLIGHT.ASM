@@ -3,11 +3,15 @@
 	CLO		; Close unwanted windows.
 Start:
 			; Turn off all the traffic lights.
-	MOV AL,0	; Copy 00000000 into the AL register.
+	MOV AL,84	; Copy 00000000 into the AL register.
 	OUT 01		; Send AL to Port One (The traffic lights).
 			; Turn on all the traffic lights.
-	MOV AL,FC	; Copy 11111100 into the AL register.
+	MOV AL,88	; Copy 11111100 into the AL register.
 	OUT 01		; Send AL to Port One (The traffic lights).
+
+	MOV AL,30
+	OUT 01
+
 	JMP Start	; Jump back to the start.
 	END		; Program ends.
 	
